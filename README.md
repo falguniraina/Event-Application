@@ -3,7 +3,8 @@
 ```markdown
 # Event Creation Web Application
 
-This is a responsive web application for creating and managing events. The project is built using **React.js** and includes features like event form submission, event listings, and theme customization.
+This is a responsive web application for creating and managing events. The project is built using **React.js**
+and includes features like event form submission, event listings, and theme customization.
 
 ## Table of Contents
 
