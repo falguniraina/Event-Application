@@ -122,10 +122,3 @@ Contributions are welcome! Please follow these steps to contribute:
 This project is licensed under the MIT License.
 ```
 
-### Additional Information:
-
-- Replace `your-username/your-repo-name` with your actual GitHub repository link.
-- The file structure is an example based on typical React projects. Adjust if your project structure is different.
-- Don't forget to include your license if you're using one.
-
-This `README.md` will guide users through cloning, installing, and running the app. Let me know if you need any other customizations!
