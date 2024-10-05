@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import CreateEventForm from './components/CreateEventForm';
+import EventList from './components/EventList';
+import { addEventToList, getEvents } from './services/mockAPI';
+import './styles.css';
 
 function App() {
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    setEvents(getEvents());
+  }, []);
+
+  const addEvent = (event) => {
+    addEventToList(event);
+    setEvents(getEvents());
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<CreateEventForm addEvent={addEvent} />} />
+          <Route path="/list" element={<EventList events={events} />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
